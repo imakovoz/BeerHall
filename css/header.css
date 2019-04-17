@@ -1,0 +1,38 @@
+header {
+  /* background-color: green; */
+  height: 8rem;
+  width: 90%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+header div {
+  border: 1px solid #70695c;
+  flex-grow: 1;
+  color: #f4db5e;
+  text-align: center;
+  line-height: 64px;
+}
+
+header section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+}
+
+.header-half {
+  height: 50%;
+}
+
+#headerLeft > div {
+  border-right: 0px;
+}
+
+#headerRight > div {
+  border-left: 0px;
+}

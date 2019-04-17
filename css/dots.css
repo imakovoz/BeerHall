@@ -1,0 +1,190 @@
+#menu {
+  display: grid;
+  grid-template-columns: 29% 14% 14% 14% 29%;
+  grid-template-rows: 29% 14% 14% 14% 29%;
+  width: 4rem;
+  position: relative;
+  flex-grow: 0;
+}
+
+#menu, #reservation, #retailers, #search {
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(
+    to bottom,
+    transparent 40%,
+    #59c4c6 40%,
+    #59c4c6 44%,
+    #f4db5e 44%
+  );
+  background-image: -o-linear-gradient(
+    to bottom,
+    transparent 40%,
+    #59c4c6 40%,
+    #59c4c6 44%,
+    #f4db5e 44%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    transparent 40%,
+    #59c4c6 40%,
+    #59c4c6 44%,
+    #f4db5e 44%
+  );
+  background-size: 100% 250%;
+  background-position: 0% 0%;
+}
+#menu:hover, #reservation:hover, #retailers:hover, #search:hover {
+  color: #3d322c;
+  transition: all 1s;
+  background-position: 0% 100%;
+}
+
+.menuDot {
+  white-space: normal;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+#dot1 {
+  grid-row: 2 / 2;
+  grid-column: 2 / 2;
+}
+#dot2 {
+  grid-row: 2 / 2;
+  grid-column: 3 / 3;
+}
+#dot3 {
+  grid-row: 2 / 2;
+  grid-column: 4 / 4;
+}
+#dot4 {
+  grid-row: 3 / 3;
+  grid-column: 2 / 2;
+}
+#dot5 {
+  grid-row: 3 / 3;
+  grid-column: 3 / 3;
+}
+#dot6 {
+  grid-row: 3 / 3;
+  grid-column: 4 / 4;
+}
+#dot7 {
+  grid-row: 4 / 4;
+  grid-column: 2 / 2;
+}
+#dot8 {
+  grid-row: 4 / 4;
+  grid-column: 3 / 3;
+}
+#dot9 {
+  grid-row: 4 / 4;
+  grid-column: 4 / 4;
+}
+
+#menu:hover > .menuDot {
+  color: #3d322c;
+}
+
+#menu:hover #dot1 {
+  animation: scintillateDots1 4s forwards;
+}
+@keyframes scintillateDots1 {
+  0% {
+    color: transparent;
+  }
+  11% {
+    color: #3d322c;
+  }
+}
+#menu:hover #dot2 {
+  animation: scintillateDots2 4s forwards;
+}
+@keyframes scintillateDots2 {
+  0% {
+    color: transparent;
+  }
+  22% {
+    color: #3d322c;
+  }
+}
+#menu:hover #dot3 {
+  animation: scintillateDots3 4s forwards;
+}
+@keyframes scintillateDots3 {
+  0% {
+    color: transparent;
+  }
+  33% {
+    color: #3d322c;
+  }
+}
+#menu:hover #dot4 {
+  animation: scintillateDots4 4s forwards;
+}
+@keyframes scintillateDots4 {
+  0% {
+    color: transparent;
+  }
+  44% {
+    color: #3d322c;
+  }
+}
+#menu:hover #dot5 {
+  animation: scintillateDots5 4s forwards;
+}
+@keyframes scintillateDots5 {
+  0% {
+    color: transparent;
+  }
+  55% {
+    color: #3d322c;
+  }
+}
+#menu:hover #dot6 {
+  animation: scintillateDots6 4s forwards;
+}
+@keyframes scintillateDots6 {
+  0% {
+    color: transparent;
+  }
+  66% {
+    color: #3d322c;
+  }
+}
+#menu:hover #dot7 {
+  animation: scintillateDots7 4s forwards;
+}
+@keyframes scintillateDots7 {
+  0% {
+    color: transparent;
+  }
+  77% {
+    color: #3d322c;
+  }
+}
+#menu:hover #dot8 {
+  animation: scintillateDots8 4s forwards;
+}
+@keyframes scintillateDots8 {
+  0% {
+    color: transparent;
+  }
+  88% {
+    color: #3d322c;
+  }
+}
+#menu:hover #dot9 {
+  animation: scintillateDots9 4s forwards;
+}
+@keyframes scintillateDots9 {
+  0% {
+    color: transparent;
+  }
+  99% {
+    color: #3d322c;
+  }
+}
