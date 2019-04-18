@@ -12,6 +12,7 @@ header {
 
 header div {
   border: 1px solid #70695c;
+
   flex-grow: 1;
   color: #f4db5e;
   text-align: center;
@@ -35,4 +36,32 @@ header section {
 
 #headerRight > div {
   border-left: 0px;
+}
+
+#social {
+  cursor: pointer;
+}
+
+#social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#mainLogo {
+  height: 100%;
+}
+
+#menu {
+  border-bottom-left-radius: 3px;
+}
+
+#search {
+  border-bottom-right-radius: 3px;
+}
+
+#logo {
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
