@@ -39,10 +39,6 @@ header section {
 }
 
 #social {
-  cursor: pointer;
-}
-
-#social {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -64,4 +60,8 @@ header section {
 #logo {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+}
+
+#social > p {
+  cursor: default;
 }
