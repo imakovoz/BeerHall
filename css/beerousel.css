@@ -30,6 +30,16 @@
   justify-content: center;
   box-sizing: border-box;
   padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.railContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
 }
 
 .railItem {

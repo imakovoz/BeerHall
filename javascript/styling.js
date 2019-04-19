@@ -60,6 +60,28 @@ window.addEventListener("DOMContentLoaded", event => {
       ticking = true;
     }
   });
+  document.querySelector("#rail1").style.left = "0px";
+  document.querySelector("#rail2").style.left = -1 * screen.width + "px";
+  var rail1Scroll = window.setInterval(moveRail1, 8);
+  function moveRail1() {
+    var positionLeft =
+      document.querySelector("#rail1").style.left.split("px")[0] * 1;
+    if (positionLeft <= screen.width) {
+      document.querySelector("#rail1").style.left = positionLeft + 1 + "px";
+    } else {
+      document.querySelector("#rail1").style.left = -1 * screen.width + "px";
+    }
+  }
+  var rail1Scroll = window.setInterval(moveRail2, 8);
+  function moveRail2() {
+    var positionLeft =
+      document.querySelector("#rail2").style.left.split("px")[0] * 1;
+    if (positionLeft <= screen.width) {
+      document.querySelector("#rail2").style.left = positionLeft + 1 + "px";
+    } else {
+      document.querySelector("#rail2").style.left = -1 * screen.width + "px";
+    }
+  }
 });
 
 function convertRemToPixels(rem) {
