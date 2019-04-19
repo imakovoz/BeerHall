@@ -1,0 +1,57 @@
+#beerousel {
+  grid-row: 2 / 2;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#topBeerousel {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+#topBeerousel h2 {
+  font-size: 4rem;
+  color: #3d322c;
+  font-weight: 800;
+  text-align: center;
+}
+
+#bottomBeerousel {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.railItem {
+  height: 100%;
+  display: flex;
+  width: 20%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.railItem img {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+}
+
+.railItem:hover .beerHover {
+  display: block;
+}
+
+.beerHover {
+  display: none;
+}

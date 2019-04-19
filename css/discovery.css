@@ -1,0 +1,166 @@
+#home {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: blue;
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.homePanel {
+  height: 100%;
+}
+
+.homeCreative {
+  min-width: 50vw;
+  object-fit: cover;
+}
+
+.fill > * {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homePanel:hover > img {
+  display: none;
+}
+
+.star_icon {
+  width: 50px;
+  height: 50px;
+}
+
+.homeDiscovery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+.homeDiscovery > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.discoverButton {
+  position: relative;
+  padding: 5px;
+  background-color: #59c4c6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 3.5rem;
+}
+
+.innerDiscoverButton {
+  position: absolute;
+  padding: 15px 25px;
+  border: 1px solid white;
+  z-index: 9;
+  color: #333;
+  font-size: 13px;
+  font-weight: 700;
+  width: 8.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backDiamond {
+  left: 6rem;
+  top: 2.05rem;
+  position: absolute;
+  background-color: #59c4c6;
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, -50%) rotate(45deg) scale(1, 1);
+  z-index: 5;
+}
+
+.homeDiscovery:hover .discoverButton {
+  background-color: #f3db5e;
+}
+
+.homeDiscovery:hover .backDiamond {
+  background-color: #f3db5e;
+  animation: increaseDiamond 1s forwards;
+}
+
+.homeDiscovery:hover .innerDiscoverButton {
+  border: 1px solid transparent;
+  animation: fadeBorder 1s infinite;
+}
+
+.discoverHeader {
+  font-size: 19.5px;
+}
+
+.homeLogo {
+  width: 60%;
+}
+
+.homeDiscovery:hover .homeLogo {
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 2px, -2px);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(1px, -2px, 2px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 2px, -2px);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, -2px, 2px);
+  }
+}
+
+@keyframes fadeBorder {
+  0%,
+  100% {
+    border: 1px solid white;
+  }
+
+  50% {
+    border: 1px solid transparent;
+  }
+}
+
+@keyframes increaseDiamond {
+  0% {
+    width: 60px;
+    height: 60px;
+  }
+
+  100% {
+    width: 65px;
+    height: 65px;
+  }
+}
