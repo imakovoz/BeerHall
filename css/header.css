@@ -1,22 +1,45 @@
 header {
-  /* background-color: green; */
   height: 8rem;
   width: 90%;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 1;
   margin-left: 5%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr;
+  grid-template-rows: 100%;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+#headerLeft {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  width: 100%;
+  height: 100%;
+}
+
+#logo {
+  grid-column: 2 / 2;
+  grid-row: 1 / 1;
+  width: 100%;
+  height: 100%;
+}
+
+#headerRight {
+  grid-column: 3 / 3;
+  grid-row: 1 / 1;
+  width: 100%;
+  height: 100%;
 }
 
 header div {
   border: 1px solid #70695c;
-
   flex-grow: 1;
   color: #f4db5e;
   text-align: center;
   line-height: 64px;
+  box-sizing: border-box;
 }
 
 header section {

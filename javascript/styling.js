@@ -21,6 +21,7 @@ window.addEventListener("DOMContentLoaded", event => {
           (scroll_pos / convertRemToPixels(4)) * 0.85 +
           ")";
       });
+      document.querySelector("#logo img").src = "resources/imgs/logo.png";
       document.querySelector("#logo").style.borderBottomRightRadius =
         Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
       document.querySelector("#logo").style.borderBottomLeftRadius =
@@ -31,6 +32,9 @@ window.addEventListener("DOMContentLoaded", event => {
         Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
     } else {
       logoEl.style.height = "50%";
+
+      document.querySelector("#logo img").src =
+        "resources/imgs/second_logo.png";
       headerEl.style.width = "100%";
       headerEl.style.marginLeft = "0%";
       headerEls.forEach(header => {
@@ -38,6 +42,8 @@ window.addEventListener("DOMContentLoaded", event => {
       });
       document.querySelector("#logo").style.borderBottomRightRadius = "0px";
       document.querySelector("#logo").style.borderBottomLeftRadius = "0px";
+      document.querySelector("#logo").style.border =
+        "border: 1px solid #70695c";
       document.querySelector("#menu").style.borderBottomLeftRadius = "0px";
       document.querySelector("#search").style.borderBottomRightRadius = "0px";
     }
