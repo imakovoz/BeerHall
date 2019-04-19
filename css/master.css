@@ -1,5 +1,5 @@
 * {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 
 body {
@@ -66,8 +66,8 @@ video {
 }
 
 .star_icon {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 .homeDiscovery {

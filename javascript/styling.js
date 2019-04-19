@@ -3,34 +3,51 @@ window.addEventListener("DOMContentLoaded", event => {
   let last_known_scroll_position = 0;
   let ticking = false;
 
-  function doSomething(scroll_pos) {
+  function alterElements(scroll_pos) {
     const logoEl = document.querySelector("#logo");
     const headerEls = document.querySelectorAll("header div");
+    const headerEl = document.querySelector("header");
 
     if (scroll_pos <= convertRemToPixels(4)) {
-      logoEl.style.height = 100 - scroll_pos / convertRemToPixels(4) * 50 + "%";
+      logoEl.style.height =
+        100 - (scroll_pos / convertRemToPixels(4)) * 50 + "%";
+      headerEl.style.width =
+        90 + (scroll_pos / convertRemToPixels(4)) * 10 + "%";
+      headerEl.style.marginLeft =
+        5 - (scroll_pos / convertRemToPixels(4)) * 5 + "%";
       headerEls.forEach(header => {
         header.style.backgroundColor =
-          "rgba(38, 24, 14, " + scroll_pos / convertRemToPixels(4) * 0.98 + ")";
+          "rgba(38, 24, 14, " +
+          (scroll_pos / convertRemToPixels(4)) * 0.85 +
+          ")";
       });
-
-      console.log(logoEl.style.height);
+      document.querySelector("#logo").style.borderBottomRightRadius =
+        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
+      document.querySelector("#logo").style.borderBottomLeftRadius =
+        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
+      document.querySelector("#menu").style.borderBottomLeftRadius =
+        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
+      document.querySelector("#search").style.borderBottomRightRadius =
+        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
     } else {
       logoEl.style.height = "50%";
+      headerEl.style.width = "100%";
+      headerEl.style.marginLeft = "0%";
       headerEls.forEach(header => {
-        header.style.backgroundColor = "rgba(38, 24, 14, 0.98)";
+        header.style.backgroundColor = "rgba(38, 24, 14, 0.85)";
       });
+      document.querySelector("#logo").style.borderBottomRightRadius = "0px";
+      document.querySelector("#logo").style.borderBottomLeftRadius = "0px";
+      document.querySelector("#menu").style.borderBottomLeftRadius = "0px";
+      document.querySelector("#search").style.borderBottomRightRadius = "0px";
     }
-
-    console.log(scroll_pos);
-    // Do something with the scroll position
   }
   window.addEventListener("scroll", function(e) {
     last_known_scroll_position = window.scrollY;
 
     if (!ticking) {
       window.requestAnimationFrame(function() {
-        doSomething(last_known_scroll_position);
+        alterElements(last_known_scroll_position);
         ticking = false;
       });
 
