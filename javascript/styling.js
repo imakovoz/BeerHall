@@ -11,30 +11,26 @@ window.addEventListener("DOMContentLoaded", event => {
     const headerEl = document.querySelector("header");
 
     if (scroll_pos <= convertRemToPixels(4)) {
-      logoEl.style.height =
-        100 - (scroll_pos / convertRemToPixels(4)) * 50 + "%";
-      headerEl.style.width =
-        90 + (scroll_pos / convertRemToPixels(4)) * 10 + "%";
+      logoEl.style.height = 100 - scroll_pos / convertRemToPixels(4) * 50 + "%";
+      headerEl.style.width = 90 + scroll_pos / convertRemToPixels(4) * 10 + "%";
       headerEl.style.marginLeft =
-        5 - (scroll_pos / convertRemToPixels(4)) * 5 + "%";
+        5 - scroll_pos / convertRemToPixels(4) * 5 + "%";
       headerEls.forEach(header => {
         header.style.backgroundColor =
-          "rgba(38, 24, 14, " +
-          (scroll_pos / convertRemToPixels(4)) * 0.85 +
-          ")";
+          "rgba(38, 24, 14, " + scroll_pos / convertRemToPixels(4) * 0.85 + ")";
       });
       document.querySelector("#logo img").src = "resources/imgs/logo.png";
       document.querySelector("#logo").style.borderBottomRightRadius =
-        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
+        Math.round(3 - scroll_pos / convertRemToPixels(4) * 3) + "px";
       document.querySelector("#logo").style.borderBottomLeftRadius =
-        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
+        Math.round(3 - scroll_pos / convertRemToPixels(4) * 3) + "px";
       document.querySelector("#menu").style.borderBottomLeftRadius =
-        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
+        Math.round(3 - scroll_pos / convertRemToPixels(4) * 3) + "px";
       document.querySelector("#search").style.borderBottomRightRadius =
-        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
+        Math.round(3 - scroll_pos / convertRemToPixels(4) * 3) + "px";
     } else {
       logoEl.style.height = "50%";
-
+      document.querySelector("#logo img").style.transition = "0s";
       document.querySelector("#logo img").src =
         "resources/imgs/second_logo.png";
       headerEl.style.width = "100%";
@@ -62,62 +58,67 @@ window.addEventListener("DOMContentLoaded", event => {
       ticking = true;
     }
   });
+});
+
+window.addEventListener("load", event => {
+  // fit rail item covers
+
+  document.querySelectorAll(".railItem").forEach(railEl => {
+    console.log(railEl.querySelector(".beer").clientHeight * 0.85 + "px");
+    railEl.querySelector(".beerItem").style.height =
+      railEl.querySelector(".beer").clientHeight * 0.85 + "px";
+  });
 
   // Beerousel scrolling
+  var horizontalOffset = document.querySelector("#rail1").offsetWidth;
+
   document.querySelector("#rail1").style.left = "0px";
-  document.querySelector("#rail2").style.left = -1 * screen.width * 1.2 + "px";
-  var rail1Scroll = window.setInterval(moveRail1, 10);
-  function moveRail1() {
+  document.querySelector("#rail2").style.left = -1 * horizontalOffset + "px";
+  var railScroll = window.setInterval(moveRail, 10);
+  function moveRail() {
     var positionLeft =
       document.querySelector("#rail1").style.left.split("px")[0] * 1;
-    if (positionLeft <= screen.width * 1.2) {
+    if (positionLeft <= horizontalOffset) {
       document.querySelector("#rail1").style.left = positionLeft + 1 + "px";
     } else {
       document.querySelector("#rail1").style.left =
-        -1 * screen.width * 1.2 + "px";
+        -1 * horizontalOffset + 1 + "px";
     }
-  }
-  var rail2Scroll = window.setInterval(moveRail2, 10);
-  function moveRail2() {
-    var positionLeft =
+    positionLeft =
       document.querySelector("#rail2").style.left.split("px")[0] * 1;
-    if (positionLeft <= screen.width * 1.2) {
+    if (positionLeft <= horizontalOffset) {
       document.querySelector("#rail2").style.left = positionLeft + 1 + "px";
     } else {
       document.querySelector("#rail2").style.left =
-        -1 * screen.width * 1.2 + "px";
+        -1 * horizontalOffset + 1 + "px";
     }
   }
 
   document.querySelectorAll(".beerItem").forEach(beer => {
     beer.addEventListener("mouseenter", function(event) {
-      clearInterval(rail1Scroll);
-      clearInterval(rail2Scroll);
+      clearInterval(railScroll);
     });
   });
   document.querySelectorAll(".beerItem").forEach(beer => {
     beer.addEventListener("mouseleave", function(event) {
-      clearInterval(rail1Scroll);
-      clearInterval(rail2Scroll);
-      rail1Scroll = window.setInterval(moveRail1, 20);
-      rail2Scroll = window.setInterval(moveRail2, 20);
+      clearInterval(railScroll);
+
+      railScroll = window.setInterval(moveRail, 20);
     });
   });
   document
     .querySelector("#bottomBeerousel")
     .addEventListener("mouseenter", function(event) {
-      clearInterval(rail1Scroll);
-      clearInterval(rail2Scroll);
-      rail1Scroll = window.setInterval(moveRail1, 20);
-      rail2Scroll = window.setInterval(moveRail2, 20);
+      clearInterval(railScroll);
+
+      railScroll = window.setInterval(moveRail, 20);
     });
   document
     .querySelector("#bottomBeerousel")
     .addEventListener("mouseleave", function(event) {
-      clearInterval(rail1Scroll);
-      clearInterval(rail2Scroll);
-      rail1Scroll = window.setInterval(moveRail1, 10);
-      rail2Scroll = window.setInterval(moveRail2, 10);
+      clearInterval(railScroll);
+
+      railScroll = window.setInterval(moveRail, 10);
     });
 });
 
