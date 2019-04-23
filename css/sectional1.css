@@ -54,4 +54,17 @@
 .checkOut:hover .backDiamond {
   transition: 1s;
   background-color: #f3db5d;
+  animation: increaseDiamond 1s forwards;
+}
+
+@keyframes increaseDiamond {
+  0% {
+    width: 60px;
+    height: 60px;
+  }
+
+  100% {
+    width: 65px;
+    height: 65px;
+  }
 }
