@@ -8,4 +8,50 @@
   position: relative;
   display: flex;
   flex-grow: 1;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.sectional1ButtonContainer {
+  position: absolute;
+}
+
+.checkOut > img {
+  vertical-align: top;
+  width: 100%; /* max width */
+  opacity: 0; /* make it transparent */
+}
+
+#discProduct {
+  background-image: url("../resources/imgs/discover-product.jpg");
+}
+
+#beersOnTap {
+  background-image: url("../resources/imgs/beers-on-tap.jpg");
+}
+
+.sectional1ButtonContainer {
+  cursor: pointer;
+  margin-top: 45%;
+}
+
+.checkOut:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+}
+
+.checkOut {
+  box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.2);
+}
+
+.checkOut:hover .sectional1ButtonContainer {
+  margin-top: 40%;
+  transition: 1s;
+  background-color: #f3db5d;
+}
+
+.checkOut:hover .backDiamond {
+  transition: 1s;
+  background-color: #f3db5d;
 }

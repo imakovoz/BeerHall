@@ -26,5 +26,5 @@ video {
 #main-container {
   display: grid;
   background-color: red;
-  grid-template-rows: 100vh 110vh 60vh 60vh 100vh 100vh;
+  grid-template-rows: 100vh 110vh auto 80vh 100vh 100vh;
 }

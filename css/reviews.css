@@ -1,0 +1,59 @@
+#reviewsContainer h3 {
+  font-size: 3rem;
+  font-family: "Abril Fatface", cursive;
+  color: #3d322c;
+}
+
+#reviewsContainer {
+  background-image: url("../resources/imgs/paper.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#reviewHolder {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.review {
+  width: 25%;
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reviewStars {
+  width: 80%;
+}
+
+.reviewStars img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.reviewAuthor {
+  padding-top: 1rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.875rem;
+}
+
+.reviewContent {
+  color: #3d322c;
+  font-family: "Oswald", sans-serif;
+}
+
+.reviewTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
