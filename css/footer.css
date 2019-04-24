@@ -59,21 +59,25 @@
   margin: 1.5rem 0;
 }
 
-#hoursLocHeader h4:nth-child(1) {
-  padding-right: 3rem;
+.hlHeaderContainer h4 {
   cursor: pointer;
+  border-bottom: 2px solid transparent;
+  box-sizing: border-box;
+  margin: 0;
 }
 
-#hoursLocHeader h4:nth-child(2) {
+#hlHeader1 {
+  padding-right: 3rem;
+}
+
+#hlHeader2 {
   padding: 0 3rem;
   border-left: 1px solid white;
   border-right: 1px solid white;
-  cursor: pointer;
 }
 
-#hoursLocHeader h4:nth-child(3) {
+#hlHeader3 {
   padding-left: 3rem;
-  cursor: pointer;
 }
 
 #hoursLocHeader h4:hover {
@@ -90,6 +94,12 @@
 .timeContainer {
   display: flex;
   flex-direction: column;
+  width: 50%;
+}
+
+.timeContainer:nth-child(2) {
+  margin-left: 2rem;
+  margin-right: 1rem;
 }
 
 .hoursLocItem {
@@ -99,15 +109,17 @@
 }
 
 .hoursLocItem h6 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: "Oswald", sans-serif;
+  font-weight: 300;
   color: white;
   margin: 0;
 }
 
 .hoursLocItem p {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-family: "Roboto Mono", monospace;
+  font-weight: 300;
   color: #fdf1c6;
   margin: 0;
 }
@@ -115,4 +127,43 @@
 .hlHeaderContainer {
   display: flex;
   justify-content: space-around;
+}
+
+/* #contactDetailContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+#contactDetailContainer > div {
+  width: 50%;
+} */
+
+#conDetailLeft {
+  color: #fdf1c6;
+  font-size: 0.9rem;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  box-sizing: border-box;
+  padding-right: 3rem;
+  padding-top: 2rem;
+}
+
+#conDetailRight {
+  padding-top: 2rem;
+}
+
+#conDetailRight p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #f3db5d;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+#conDetailRight p:hover {
+  color: #57c3c5;
 }
