@@ -2,6 +2,7 @@
   background-color: #212121;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 #leftFooter,
@@ -21,6 +22,8 @@
       rgba(54, 54, 54, 0.5)
     ),
     url("../resources/imgs/footer-right.jpg");
+  position: absolute;
+  left: 50%;
 }
 
 #ourBeers h3 {
@@ -129,16 +132,6 @@
   justify-content: space-around;
 }
 
-/* #contactDetailContainer {
-  display: flex;
-  flex-direction: row;
-  margin-top: 2rem;
-}
-
-#contactDetailContainer > div {
-  width: 50%;
-} */
-
 #conDetailLeft {
   color: #fdf1c6;
   font-size: 0.9rem;
@@ -166,4 +159,90 @@
 
 #conDetailRight p:hover {
   color: #57c3c5;
+}
+
+#bottomFooterBar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+#bottomFooterBar span:not(:first-child) {
+  margin-left: 2rem;
+}
+
+#bottomFooterBar span {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 0.6rem;
+  color: white;
+  cursor: pointer;
+}
+
+#bottomFooterBar span:hover {
+  color: #57c3c5;
+  text-decoration: underline;
+}
+
+#rightFooter > div {
+  padding-left: 40%;
+  /* padding-top: 50%; */
+}
+
+#awardsImg {
+  padding-top: 50%;
+}
+
+#awardsImg img {
+  width: 25rem;
+}
+
+#newsLetterSubscribe {
+  padding-top: 5rem;
+}
+
+#newsLetterSubscribe label {
+  font-family: "Abril Fatface", cursive;
+  color: white;
+  font-size: 1.25rem;
+}
+
+#newsLetterSubscribe section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#newsLetterSubscribe section input {
+  padding: 1.25rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #f3db5d;
+  width: 60%;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+}
+
+#newsLetterSubscribe section input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+}
+
+#newsLetterSubscribe section div {
+  padding: 1.155rem 2rem;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  /* line-height: 1.1rem; */
+  background-color: #f3db5d;
+  border: 1px solid #f3db5d;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
 }
