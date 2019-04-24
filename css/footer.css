@@ -46,3 +46,73 @@
 #beerList {
   column-count: 3;
 }
+
+#hoursLoc {
+  display: flex;
+  flex-direction: column;
+}
+
+#hoursLocHeader {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin: 1.5rem 0;
+}
+
+#hoursLocHeader h4:nth-child(1) {
+  padding-right: 3rem;
+  cursor: pointer;
+}
+
+#hoursLocHeader h4:nth-child(2) {
+  padding: 0 3rem;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  cursor: pointer;
+}
+
+#hoursLocHeader h4:nth-child(3) {
+  padding-left: 3rem;
+  cursor: pointer;
+}
+
+#hoursLocHeader h4:hover {
+  color: #58c5c7;
+  border-bottom: 2px solid #58c5c7;
+}
+
+#hoursLocContainer1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.timeContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.hoursLocItem {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.hoursLocItem h6 {
+  font-size: 1rem;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  margin: 0;
+}
+
+.hoursLocItem p {
+  font-size: 0.875rem;
+  font-family: "Roboto Mono", monospace;
+  color: #fdf1c6;
+  margin: 0;
+}
+
+.hlHeaderContainer {
+  display: flex;
+  justify-content: space-around;
+}
