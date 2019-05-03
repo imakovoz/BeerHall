@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/reviews.css" />
     <link rel="stylesheet" href="css/airbnb.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/menuDropdown.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Lora|Abril+Fatface|Oswald:300,400,600|Roboto+Mono:300,400"
       rel="stylesheet"
@@ -32,9 +33,71 @@
     <script type="text/javascript" src="javascript/styling.js"></script>
   </head>
   <body>
+    <section id="menuDropdown">
+      <div id="menuContainer">
+        <div class="menuHolder" id="menuLeftHold">
+          <div class="menuOption menuAnimation" id="menuClose">
+            <div id="menuCloseDotContainer">
+              <span class="menuCloseDot" id="closeDot1">•</span>
+              <span class="menuCloseDot" id="closeDot2">•</span>
+              <span class="menuCloseDot" id="closeDot3">•</span>
+              <span class="menuCloseDot" id="closeDot4">•</span>
+              <span class="menuCloseDot" id="closeDot5">•</span>
+            </div>
+            <p>Close</p>
+          </div>
+          <div class="menuOption menuAnimation" id="menuReservation">
+            Reservation
+          </div>
+          <div class="menuOption menuAnimation" id="menuRetailers">
+            Retailers
+          </div>
+          <div class="menuOption menuAnimation" id="menuBoutique">Boutique</div>
+          <div class="menuOption menuAnimation" id="menuBeers">Beers</div>
+          <div class="menuOption menuAnimation" id="menuMenu">Menu</div>
+          <div class="menuOption menuAnimation" id="menuTeam">Team</div>
+          <div class="menuOption menuAnimation" id="menuHistoric">Historic</div>
+        </div>
+        <div class="menuHolder" id="menuMidHold">
+          <div class="menuLetter moveLeft">A</div>
+          <div class="menuLetter moveRight">L</div>
+          <div class="menuLetter moveLeft">A</div>
+          <div class="menuLetter moveRight">F</div>
+          <div class="menuLetter moveLeft">U</div>
+          <div class="menuLetter moveRight">T</div>
+        </div>
+        <div class="menuHolder" id="menuRightHold">
+          <div class="menuOption" id="menuSocial">
+            <section>
+              <i class="fas fa-phone" fa-3x></i>
+              <p>•</p>
+              <i class="far fa-envelope" fa-3x></i>
+              <p>•</p>
+              <i class="fab fa-facebook-f" fa-3x></i>
+              <p>•</p>
+              <i class="fab fa-instagram" fa-3x></i>
+            </section>
+          </div>
+          <div class="menuOption" id="menuSearchLang">
+            <div id="menuFR" class="menuAnimation">FR</div>
+            <div id="menuSearch" class="menuAnimation">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+          <div class="menuOption menuAnimation" id="menuNews">News</div>
+          <div class="menuOption menuAnimation" id="menuContact">Contact</div>
+          <div class="menuOption menuAnimation" id="menuCart">Cart</div>
+          <div class="menuOption menuAnimation" id="menuSt">St-Tite Saloon</div>
+          <div class="menuOption menuAnimation" id="menuKapibouska">
+            Kapibouska
+          </div>
+          <div class="menuOption menuAnimation" id="menuBrewery">Brewery</div>
+        </div>
+      </div>
+    </section>
     <header>
       <section id="headerLeft">
-        <div id="menu" class="header-half">
+        <div id="menu" class="header-half openMenu">
           <span class="menuDot" id="dot1">•</span>
           <span class="menuDot" id="dot2">•</span>
           <span class="menuDot" id="dot3">•</span>
@@ -446,7 +509,10 @@
                   value=""
                   placeholder="Email"
                 />
-                <div>Submit</div>
+                <div id="submitEmail">
+                  <div id="innerSubmitEmail">Submit</div>
+                  <div class="backDiamond"></div>
+                </div>
               </section>
             </form>
           </div>

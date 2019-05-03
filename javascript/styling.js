@@ -11,23 +11,27 @@ window.addEventListener("DOMContentLoaded", event => {
     const headerEl = document.querySelector("header");
 
     if (scroll_pos <= convertRemToPixels(4)) {
-      logoEl.style.height = 100 - scroll_pos / convertRemToPixels(4) * 50 + "%";
-      headerEl.style.width = 90 + scroll_pos / convertRemToPixels(4) * 10 + "%";
+      logoEl.style.height =
+        100 - (scroll_pos / convertRemToPixels(4)) * 50 + "%";
+      headerEl.style.width =
+        90 + (scroll_pos / convertRemToPixels(4)) * 10 + "%";
       headerEl.style.marginLeft =
-        5 - scroll_pos / convertRemToPixels(4) * 5 + "%";
+        5 - (scroll_pos / convertRemToPixels(4)) * 5 + "%";
       headerEls.forEach(header => {
         header.style.backgroundColor =
-          "rgba(38, 24, 14, " + scroll_pos / convertRemToPixels(4) * 0.85 + ")";
+          "rgba(38, 24, 14, " +
+          (scroll_pos / convertRemToPixels(4)) * 0.85 +
+          ")";
       });
       document.querySelector("#logo img").src = "resources/imgs/logo.png";
       document.querySelector("#logo").style.borderBottomRightRadius =
-        Math.round(3 - scroll_pos / convertRemToPixels(4) * 3) + "px";
+        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
       document.querySelector("#logo").style.borderBottomLeftRadius =
-        Math.round(3 - scroll_pos / convertRemToPixels(4) * 3) + "px";
+        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
       document.querySelector("#menu").style.borderBottomLeftRadius =
-        Math.round(3 - scroll_pos / convertRemToPixels(4) * 3) + "px";
+        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
       document.querySelector("#search").style.borderBottomRightRadius =
-        Math.round(3 - scroll_pos / convertRemToPixels(4) * 3) + "px";
+        Math.round(3 - (scroll_pos / convertRemToPixels(4)) * 3) + "px";
     } else {
       logoEl.style.height = "50%";
       document.querySelector("#logo img").style.transition = "0s";
@@ -61,6 +65,49 @@ window.addEventListener("DOMContentLoaded", event => {
 });
 
 window.addEventListener("load", event => {
+  document.querySelectorAll(".openMenu").forEach(e => {
+    e.addEventListener("click", () => {
+      window.moveMenuDown = window.setInterval(lowerMenu, 8);
+      window.shouldLowerMenu = true;
+      document.querySelector("header").style.display = "none";
+      document.querySelector("#menuDropdown").style.display = "block";
+    });
+  });
+  document.querySelector("#menuClose").addEventListener("click", () => {
+    document.querySelector("header").style.display = "grid";
+    document.querySelector("#menuDropdown").style.display = "none";
+  });
+
+  function lowerMenu() {
+    if (
+      document.querySelector("#menuContainer").style.bottom === "" ||
+      (document.querySelector("#menuContainer").style.bottom === "1rem" &&
+        window.shouldLowerMenu)
+    ) {
+      window.shouldLowerMenu = false;
+      document.querySelector("#menuContainer").style.bottom =
+        Math.ceil(
+          window.innerHeight /
+            parseFloat(getComputedStyle(document.documentElement).fontSize)
+        ) + "rem";
+    } else if (
+      document.querySelector("#menuContainer").style.bottom.replace("rem", "") *
+        1 <=
+        1 &&
+      !window.shouldLowerMenu
+    ) {
+      console.log("test");
+      clearInterval(window.moveMenuDown);
+    } else {
+      document.querySelector("#menuContainer").style.bottom =
+        document
+          .querySelector("#menuContainer")
+          .style.bottom.replace("rem", "") -
+        1 +
+        "rem";
+    }
+  }
+
   // fit rail item covers
 
   document.querySelectorAll(".railItem").forEach(railEl => {
