@@ -65,6 +65,15 @@
   align-items: center;
 }
 
+#menuBottomRightHold {
+  grid-row: 2 / 2;
+  grid-column: 3 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .menuLetter {
   font-size: 6rem;
 }
@@ -345,4 +354,45 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.menuReview {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+#resumeContainer {
+  background-color: #3c322c;
+  cursor: pointer;
+}
+
+#resumeContainer > .backDiamond {
+  background-color: #3c322c;
+}
+
+#resumeContainer > .innerDiscoverButton {
+  color: white;
+}
+
+#resumeContainer:hover,
+#resumeContainer:hover > .innerDiscoverButton,
+#resumeContainer:hover > .backDiamond {
+  background-color: #59c4c6;
+}
+
+#resumeContainer:hover > .innerDiscoverButton {
+  animation: fadeBorder 1s infinite;
+}
+
+.reviewAuthor > a {
+  text-decoration: none;
+  color: #3c322c;
+}
+
+.innerDiscoverButton > a {
+  text-decoration: none;
+  color: white;
 }
