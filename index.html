@@ -17,13 +17,6 @@
       href="https://fonts.googleapis.com/css?family=Lora|Abril+Fatface|Oswald:300,400,600|Roboto+Mono:300,400"
       rel="stylesheet"
     />
-    <!--
-      <link
-        href="https://fonts.googleapis.com/css?family=Abril+Fatface"
-        rel="stylesheet"
-      />
-      <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet">
-    -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -57,6 +50,44 @@
           <div class="menuOption menuAnimation" id="menuMenu">Menu</div>
           <div class="menuOption menuAnimation" id="menuTeam">Team</div>
           <div class="menuOption menuAnimation" id="menuHistoric">Historic</div>
+        </div>
+        <div class="menuHolder" id="menuBottomLeftHold">
+          <div id="menuScrollLeft" class="menuScroll">
+            <i class="fas fa-caret-left"></i>
+          </div>
+          <div id="menuImageHolderBL">
+            <div class="dropDownBeerHold activeBeer">
+              <img src="resources/imgs/beerousel/batiscani-bruxellensis.png" />
+              <img
+                src="resources/imgs/beerousel/batiscani-bruxellensis_hover.png"
+              />
+            </div>
+            <div class="dropDownBeerHold inactiveBeer">
+              <img src="resources/imgs/beerousel/rouge-de-mekinac.png" />
+              <img src="resources/imgs/beerousel/rouge-de-mekinac_hover.png" />
+            </div>
+            <div class="dropDownBeerHold inactiveBeer">
+              <img src="resources/imgs/beerousel/blonde-st-tite.png" />
+              <img src="resources/imgs/beerousel/blonde-st-tite_hover.png" />
+            </div>
+            <div class="dropDownBeerHold inactiveBeer">
+              <img src="resources/imgs/beerousel/mekinoise.png" />
+              <img src="resources/imgs/beerousel/mekinoise_hover.png" />
+            </div>
+            <div class="dropDownBeerHold inactiveBeer">
+              <img src="resources/imgs/beerousel/cowsure.png" />
+              <img src="resources/imgs/beerousel/cowsure_hover.png" />
+            </div>
+            <div class="dropDownBeerHold inactiveBeer">
+              <img src="resources/imgs/beerousel/ALAFU_PtiteCocotte.png" />
+              <img
+                src="resources/imgs/beerousel/ALAFU_PtiteCocotte_hover.png"
+              />
+            </div>
+          </div>
+          <div id="menuScrollRight" class="menuScroll">
+            <i class="fas fa-caret-right"></i>
+          </div>
         </div>
         <div class="menuHolder" id="menuMidHold">
           <div class="menuLetter moveLeft">A</div>
@@ -97,7 +128,7 @@
     </section>
     <header>
       <section id="headerLeft">
-        <div id="menu" class="header-half openMenu">
+        <div id="menu" class="header-half openMenu openMenu">
           <span class="menuDot" id="dot1">•</span>
           <span class="menuDot" id="dot2">•</span>
           <span class="menuDot" id="dot3">•</span>
@@ -108,10 +139,10 @@
           <span class="menuDot" id="dot8">•</span>
           <span class="menuDot" id="dot9">•</span>
         </div>
-        <div id="reservation" class="header-half">Reservations</div>
-        <div id="retailers" class="header-half">Retailers</div>
+        <div id="reservation" class="header-half openMenu">Reservations</div>
+        <div id="retailers" class="header-half openMenu">Retailers</div>
       </section>
-      <div id="logo">
+      <div id="logo" class="openMenu">
         <img src="resources/imgs/logo.png" alt="" id="mainLogo" />
       </div>
       <section id="headerRight">
@@ -124,7 +155,9 @@
           <p>•</p>
           <i class="fab fa-instagram" fa-3x></i>
         </div>
-        <div id="search" class="header-half"><i class="fas fa-search"></i></div>
+        <div id="search" class="header-half openMenu">
+          <i class="fas fa-search"></i>
+        </div>
       </section>
     </header>
     <section id="main-container">
@@ -150,7 +183,7 @@
               class="homeLogo"
             />
 
-            <div class="discoverButton">
+            <div class="discoverButton openMenu">
               <div class="backDiamond"></div>
               <div class="innerDiscoverButton">Discover Our Beers</div>
             </div>
@@ -177,7 +210,7 @@
               class="homeLogo"
             />
 
-            <div class="discoverButton">
+            <div class="discoverButton openMenu">
               <div class="backDiamond"></div>
               <div class="innerDiscoverButton">Our Food Menu</div>
             </div>
@@ -318,21 +351,21 @@
       <div class="" id="sectional1">
         <div class="checkOut" id="discProduct">
           <img src="resources/imgs/discover-product.jpg" alt="" />
-          <div class="discoverButton sectional1ButtonContainer">
+          <div class="discoverButton sectional1ButtonContainer openMenu">
             <div class="backDiamond"></div>
             <div class="innerDiscoverButton">Discover Product</div>
           </div>
         </div>
         <div class="checkOut" id="beersOnTap">
           <img src="resources/imgs/beers-on-tap.jpg" alt="" />
-          <div class="discoverButton sectional1ButtonContainer">
+          <div class="discoverButton sectional1ButtonContainer openMenu">
             <div class="backDiamond"></div>
             <div class="innerDiscoverButton">Beers on tap</div>
           </div>
         </div>
         <div class="checkOut" id="discProduct">
           <img src="resources/imgs/discover-product.jpg" alt="" />
-          <div class="discoverButton sectional1ButtonContainer">
+          <div class="discoverButton sectional1ButtonContainer openMenu">
             <div class="backDiamond"></div>
             <div class="innerDiscoverButton">Discover Product</div>
           </div>
@@ -395,7 +428,7 @@
         <div id="airbnbLeft">
           <h2>Want to enjoy a totally western experience at St-Tite?</h2>
           <h3>Sleep at the Kapibouska Inn!</h3>
-          <div class="discoverButton airbnbButtonContainer">
+          <div class="discoverButton airbnbButtonContainer openMenu">
             <div class="backDiamond"></div>
             <div class="innerDiscoverButton">Read More</div>
           </div>
@@ -409,26 +442,28 @@
           <section id="ourBeers">
             <h3>Our beers</h3>
             <div id="beerList">
-              <p>Beer of Legend</p>
-              <p>Vieille Bruin de Mékinac – GRAND CRU BARRIQUÉ 2019</p>
-              <p>La Déraille</p>
-              <p>Blonde de St-Tite</p>
-              <p>Mékinoise</p>
-              <p>Rousse Rustre</p>
-              <p>British</p>
-              <p>British à l’érable</p>
-              <p>Bête noire</p>
-              <p>P’tite Cocotte</p>
-              <p>Urubu</p>
-              <p>Ruine Papilles</p>
-              <p>Shérif St-Rod</p>
-              <p>P’tite Kapi</p>
-              <p>Kapibouska</p>
-              <p>Double Kapi</p>
-              <p>Saison des Barbus Grande Réserve</p>
-              <p>L’Porter Western</p>
-              <p>Cuvée Western Spontanée</p>
-              <p>Rouge de Mékinac</p>
+              <p class="openMenu">Beer of Legend</p>
+              <p class="openMenu">
+                Vieille Bruin de Mékinac – GRAND CRU BARRIQUÉ 2019
+              </p>
+              <p class="openMenu">La Déraille</p>
+              <p class="openMenu">Blonde de St-Tite</p>
+              <p class="openMenu">Mékinoise</p>
+              <p class="openMenu">Rousse Rustre</p>
+              <p class="openMenu">British</p>
+              <p class="openMenu">British à l’érable</p>
+              <p class="openMenu">Bête noire</p>
+              <p class="openMenu">P’tite Cocotte</p>
+              <p class="openMenu">Urubu</p>
+              <p class="openMenu">Ruine Papilles</p>
+              <p class="openMenu">Shérif St-Rod</p>
+              <p class="openMenu">P’tite Kapi</p>
+              <p class="openMenu">Kapibouska</p>
+              <p class="openMenu">Double Kapi</p>
+              <p class="openMenu">Saison des Barbus Grande Réserve</p>
+              <p class="openMenu">L’Porter Western</p>
+              <p class="openMenu">Cuvée Western Spontanée</p>
+              <p class="openMenu">Rouge de Mékinac</p>
             </div>
           </section>
           <section id="hoursLoc">

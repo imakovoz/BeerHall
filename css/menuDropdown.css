@@ -56,6 +56,15 @@
   transition: all 0.5s;
 }
 
+#menuBottomLeftHold {
+  grid-row: 2 / 2;
+  grid-column: 1 / 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .menuLetter {
   font-size: 6rem;
 }
@@ -78,13 +87,11 @@
   grid-row: 1 / 1;
   border-bottom: 0px solid black;
   border-right: 0px solid black;
+  justify-content: space-between;
 }
 
-#menuClose:hover #menuCloseDotContainer {
-  /* height: 2rem;
-  width: 2rem; */
-  /* transition: height 1s;
-  transition: width 1s; */
+#menuClose p {
+  margin-right: 30%;
 }
 
 #menuReservation {
@@ -221,7 +228,7 @@
   border-left: 0px solid black;
 }
 
-.menuAnimation {
+.menuAnimation:hover {
   cursor: pointer;
   background-image: -webkit-linear-gradient(
     to bottom,
@@ -246,9 +253,6 @@
   );
   background-size: 100% 250%;
   background-position: 0% 0%;
-}
-
-.menuAnimation:hover {
   color: white;
   transition: all 1s;
   background-position: 0% 100%;
@@ -258,11 +262,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  margin-right: 1rem;
+  margin-left: 30%;
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
   box-sizing: border-box;
+}
+
+#menuClose:hover #menuCloseDotContainer {
+  width: 2rem;
+  height: 2rem;
+  margin-left: calc(30% - 0.25rem);
+  transition: height 1s, width 1s, margin-left 1s;
 }
 
 .menuCloseDot {
@@ -296,4 +307,42 @@
 #closeDot5 {
   grid-column: 3 / 3;
   grid-row: 3 / 3;
+}
+
+.menuScroll {
+  font-size: 2rem;
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#menuImageHolderBL {
+  height: 100%;
+  width: 80%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.inactiveBeer {
+  display: none;
+}
+
+.dropDownBeerHold {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.dropDownBeerHold img {
+  position: absolute;
+  padding-top: 65px;
+  max-height: 100%;
+  max-width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

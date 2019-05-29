@@ -145,3 +145,7 @@ header section {
   transition: all 1s;
   filter: brightness(0%);
 }
+
+#social i:hover {
+  color: #59c4c6;
+}

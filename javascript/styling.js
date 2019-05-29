@@ -69,14 +69,104 @@ window.addEventListener("load", event => {
     e.addEventListener("click", () => {
       window.moveMenuDown = window.setInterval(lowerMenu, 8);
       window.shouldLowerMenu = true;
+      window.scrollMenuBeers = window.setInterval(scrollAllBeers, 8000);
       document.querySelector("header").style.display = "none";
       document.querySelector("#menuDropdown").style.display = "block";
     });
   });
   document.querySelector("#menuClose").addEventListener("click", () => {
+    clearInterval(window.scrollMenuBeers);
     document.querySelector("header").style.display = "grid";
     document.querySelector("#menuDropdown").style.display = "none";
   });
+
+  document.querySelector("#menuScrollLeft").addEventListener("click", () => {
+    clearInterval(window.scrollMenuBeers);
+    var beerElList = document.querySelectorAll("#menuImageHolderBL > div");
+    for (var i = 0; i < beerElList.length; i++) {
+      if (beerElList[i].classList.contains("activeBeer")) {
+        if (i === 0) {
+          beerElList[beerElList.length - 1].classList.remove("inactiveBeer");
+          beerElList[beerElList.length - 1].classList.add("activeBeer");
+          scrollBeerViewReverse(
+            beerElList[i],
+            beerElList[beerElList.length - 1],
+            0
+          );
+        } else {
+          beerElList[i - 1].classList.remove("inactiveBeer");
+          beerElList[i - 1].classList.add("activeBeer");
+          scrollBeerViewReverse(beerElList[i], beerElList[i - 1], 0);
+        }
+        i = beerElList.length;
+        window.scrollMenuBeers = window.setInterval(scrollAllBeers, 8000);
+      }
+    }
+  });
+
+  document.querySelector("#menuScrollRight").addEventListener("click", () => {
+    clearInterval(window.scrollMenuBeers);
+    var beerElList = document.querySelectorAll("#menuImageHolderBL > div");
+    for (var i = 0; i < beerElList.length; i++) {
+      if (beerElList[i].classList.contains("activeBeer")) {
+        if (i === beerElList.length - 1) {
+          beerElList[0].classList.remove("inactiveBeer");
+          beerElList[0].classList.add("activeBeer");
+          scrollBeerView(beerElList[i], beerElList[0], 0);
+        } else {
+          beerElList[i + 1].classList.remove("inactiveBeer");
+          beerElList[i + 1].classList.add("activeBeer");
+          scrollBeerView(beerElList[i], beerElList[i + 1], 0);
+        }
+        i = beerElList.length;
+        window.scrollMenuBeers = window.setInterval(scrollAllBeers, 8000);
+      }
+    }
+  });
+
+  function scrollBeerView(el1, el2, count) {
+    setTimeout(function() {
+      el1.style.left = count + "%";
+      el2.style.left = count - 100 + "%";
+      if (count < 100) {
+        scrollBeerView(el1, el2, count + 1);
+      } else {
+        el1.classList.remove("activeBeer");
+        el1.classList.add("inactiveBeer");
+      }
+    }, 30);
+  }
+
+  function scrollBeerViewReverse(el1, el2, count) {
+    setTimeout(function() {
+      el1.style.left = count + "%";
+      el2.style.left = count + 100 + "%";
+      if (count > -100) {
+        scrollBeerViewReverse(el1, el2, count - 1);
+      } else {
+        el1.classList.remove("activeBeer");
+        el1.classList.add("inactiveBeer");
+      }
+    }, 50);
+  }
+
+  function scrollAllBeers() {
+    var beerElList = document.querySelectorAll("#menuImageHolderBL > div");
+    for (var i = 0; i < beerElList.length; i++) {
+      if (beerElList[i].classList.contains("activeBeer")) {
+        if (i === beerElList.length - 1) {
+          beerElList[0].classList.remove("inactiveBeer");
+          beerElList[0].classList.add("activeBeer");
+          scrollBeerView(beerElList[i], beerElList[0], 0);
+        } else {
+          beerElList[i + 1].classList.remove("inactiveBeer");
+          beerElList[i + 1].classList.add("activeBeer");
+          scrollBeerView(beerElList[i], beerElList[i + 1], 0);
+        }
+        i = beerElList.length;
+      }
+    }
+  }
 
   function lowerMenu() {
     if (
@@ -96,7 +186,6 @@ window.addEventListener("load", event => {
         1 &&
       !window.shouldLowerMenu
     ) {
-      console.log("test");
       clearInterval(window.moveMenuDown);
     } else {
       document.querySelector("#menuContainer").style.bottom =
@@ -111,7 +200,6 @@ window.addEventListener("load", event => {
   // fit rail item covers
 
   document.querySelectorAll(".railItem").forEach(railEl => {
-    console.log(railEl.querySelector(".beer").clientHeight * 0.85 + "px");
     railEl.querySelector(".beerItem").style.height =
       railEl.querySelector(".beer").clientHeight * 0.85 + "px";
   });
