@@ -65,9 +65,14 @@ header section {
 #social {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-grow: 3;
+}
+
+#social > * {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 #mainLogo {
