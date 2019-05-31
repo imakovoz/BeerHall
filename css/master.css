@@ -32,14 +32,14 @@ video {
     display: grid;
     background-color: white;
     grid-template-rows:
-      minmax(1500px, 100vh) minmax(600px, 110vh) auto minmax(400px, 80vh) minmax(
+      minmax(1500px, 100vh) minmax(600px, 110vh) auto minmax(400px, 100vh) minmax(
         550px,
         100vh
       )
       auto;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1001px) {
   #main-container {
     display: grid;
     background-color: white;
