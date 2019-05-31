@@ -25,9 +25,12 @@ video {
 }
 
 @media only screen and (max-width: 1000px) {
+  #foodHome {
+    margin-top: -3px;
+  }
   #main-container {
     display: grid;
-    background-color: red;
+    background-color: white;
     grid-template-rows:
       minmax(1500px, 100vh) minmax(600px, 110vh) auto minmax(400px, 80vh) minmax(
         550px,
@@ -39,7 +42,7 @@ video {
 @media only screen and (min-width: 1000px) {
   #main-container {
     display: grid;
-    background-color: red;
+    background-color: white;
     grid-template-rows:
       minmax(750px, 100vh) minmax(600px, 110vh) auto minmax(400px, 80vh) minmax(
         550px,

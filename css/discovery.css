@@ -2,7 +2,7 @@
   #home {
     display: grid;
     grid-template-rows: 50% 50%;
-    background-color: blue;
+    background-color: white;
   }
 
   .homeCreative {
@@ -13,7 +13,7 @@
   #home {
     display: grid;
     grid-template-columns: 50% 50%;
-    background-color: blue;
+    background-color: white;
   }
 }
 
