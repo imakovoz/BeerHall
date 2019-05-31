@@ -24,10 +24,29 @@ video {
   background-size: cover;
 }
 
-#main-container {
-  display: grid;
-  background-color: red;
-  grid-template-rows: 100vh 110vh auto 80vh 100vh auto;
+@media only screen and (max-width: 1000px) {
+  #main-container {
+    display: grid;
+    background-color: red;
+    grid-template-rows:
+      minmax(1500px, 100vh) minmax(600px, 110vh) auto minmax(400px, 80vh) minmax(
+        550px,
+        100vh
+      )
+      auto;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #main-container {
+    display: grid;
+    background-color: red;
+    grid-template-rows:
+      minmax(750px, 100vh) minmax(600px, 110vh) auto minmax(400px, 80vh) minmax(
+        550px,
+        100vh
+      )
+      auto;
+  }
 }
 
 textarea,
