@@ -271,7 +271,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  margin-left: 30%;
+  margin-left: 20%;
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
@@ -395,4 +395,24 @@
 .innerDiscoverButton > a {
   text-decoration: none;
   color: white;
+}
+
+.menuHolder .menuOption {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  #menuCloseDotContainer {
+    display: none;
+  }
+
+  #menuClose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menuClose p {
+    margin: 0;
+  }
 }

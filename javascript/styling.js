@@ -7,8 +7,8 @@ window.addEventListener("DOMContentLoaded", event => {
 
   function alterElements(scroll_pos) {
     const logoEl = document.querySelector("#logo");
-    const headerEls = document.querySelectorAll("header div");
-    const headerEl = document.querySelector("header");
+    const headerEls = document.querySelectorAll("#desktopHeader div");
+    const headerEl = document.querySelector("#desktopHeader");
 
     if (scroll_pos <= convertRemToPixels(4)) {
       logoEl.style.height =
@@ -70,14 +70,21 @@ window.addEventListener("load", event => {
       window.moveMenuDown = window.setInterval(lowerMenu, 8);
       window.shouldLowerMenu = true;
       window.scrollMenuBeers = window.setInterval(scrollAllBeers, 8000);
-      document.querySelector("header").style.display = "none";
+      document.querySelector("#desktopHeader").style.display = "none";
+      document.querySelector("#mobileHeader").style.display = "none";
       document.querySelector("#menuDropdown").style.display = "block";
+      document.querySelector("#main-container").style.marginTop = "0px";
     });
   });
   document.querySelector("#menuClose").addEventListener("click", () => {
     clearInterval(window.scrollMenuBeers);
-    document.querySelector("header").style.display = "grid";
+    if (screen.width < 950) {
+      document.querySelector("#mobileHeader").style.display = "flex";
+    } else {
+      document.querySelector("#desktopHeader").style.display = "grid";
+    }
     document.querySelector("#menuDropdown").style.display = "none";
+    document.querySelector("#main-container").style.marginTop = null;
   });
 
   document

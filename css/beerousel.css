@@ -46,7 +46,7 @@
     position: absolute;
   }
 }
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 750px) and (max-width: 1199px) {
   .railContainer {
     width: 250%;
     height: 100%;
@@ -55,7 +55,7 @@
     position: absolute;
   }
 }
-@media only screen and (min-width: 1px) {
+@media only screen and (min-width: 1px) and (max-width: 749px) {
   #topBeerousel h2 {
     font-size: 5rem;
   }

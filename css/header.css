@@ -1,4 +1,4 @@
-header {
+#desktopHeader {
   height: 8rem;
   width: 90%;
   position: fixed;
@@ -8,12 +8,9 @@ header {
   display: grid;
   grid-template-columns: 1fr 300px 1fr;
   grid-template-rows: 100%;
-  /* display: flex;
-  flex-direction: row; */
-  /* display: none; */
 }
 
-#headerLeft {
+#headerDesktopLeft {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
   width: 100%;
@@ -27,7 +24,7 @@ header {
   height: 100%;
 }
 
-#headerRight {
+#headerDesktopRight {
   grid-column: 3 / 3;
   grid-row: 1 / 1;
   width: 100%;
@@ -84,6 +81,7 @@ header section {
 }
 
 #search {
+  min-width: 55px;
   border-bottom-right-radius: 3px;
 }
 
@@ -103,6 +101,11 @@ header section {
   width: 4rem;
   position: relative;
   flex-grow: 0;
+}
+
+#reservation,
+#retailers {
+  padding: 0 15px;
 }
 
 #menu,
@@ -153,4 +156,53 @@ header section {
 
 #social i:hover {
   color: #59c4c6;
+}
+
+@media only screen and (max-width: 950px) {
+  #desktopHeader {
+    display: none;
+  }
+
+  #main-container {
+    margin-top: 4rem;
+  }
+}
+
+#mobileHeader {
+  background-color: #f4db5e;
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+#mobileHeader .menuDot {
+  color: black;
+}
+
+#mobileHeader #menu {
+  border: 0px solid white;
+  height: 100%;
+}
+
+#headerMobilMid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#headerMobilRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+@media only screen and (min-width: 950px) {
+  #mobileHeader {
+    display: none;
+  }
 }
