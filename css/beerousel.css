@@ -34,15 +34,38 @@
   padding-top: 20px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 7rem;
+  margin-bottom: 1rem;
 }
 
-.railContainer {
-  width: 150%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  position: absolute;
+@media only screen and (min-width: 1200px) {
+  .railContainer {
+    width: 150%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .railContainer {
+    width: 250%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+  }
+}
+@media only screen and (min-width: 1px) {
+  #topBeerousel h2 {
+    font-size: 5rem;
+  }
+  .railContainer {
+    width: 450%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+  }
 }
 
 .railItem {
