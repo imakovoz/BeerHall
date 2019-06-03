@@ -65,15 +65,32 @@ window.addEventListener("DOMContentLoaded", event => {
 });
 
 window.addEventListener("load", event => {
+  window.menuLowered = false;
+  document.querySelector("#headerMobilLeft").addEventListener("click", () => {
+    if (window.menuLowered) {
+      document.querySelector("#mobileMenuDropdown").style.display = "none";
+      window.menuLowered = false;
+    }
+  });
   document.querySelectorAll(".openMenu").forEach(e => {
     e.addEventListener("click", () => {
-      window.moveMenuDown = window.setInterval(lowerMenu, 8);
-      window.shouldLowerMenu = true;
-      window.scrollMenuBeers = window.setInterval(scrollAllBeers, 8000);
-      document.querySelector("#desktopHeader").style.display = "none";
-      document.querySelector("#mobileHeader").style.display = "none";
-      document.querySelector("#menuDropdown").style.display = "block";
-      document.querySelector("#main-container").style.marginTop = "0px";
+      if (screen.width > 950) {
+        window.menuLowered = false;
+        window.shouldLowerMenu = true;
+        window.moveMenuDown = window.setInterval(lowerMenu, 8);
+        window.scrollMenuBeers = window.setInterval(scrollAllBeers, 8000);
+        document.querySelector("#desktopHeader").style.display = "none";
+        document.querySelector("#mobileHeader").style.display = "none";
+        document.querySelector("#menuDropdown").style.display = "block";
+        document.querySelector("#main-container").style.marginTop = "0px";
+      } else {
+        if (!window.menuLowered) {
+          document.querySelector("#mobileMenuDropdown").style.display = "block";
+          window.setTimeout(function() {
+            window.menuLowered = true;
+          }, 100);
+        }
+      }
     });
   });
   document.querySelector("#menuClose").addEventListener("click", () => {
@@ -218,17 +235,21 @@ window.addEventListener("load", event => {
   function lowerMenu() {
     if (
       document.querySelector("#menuContainerDesktop").style.bottom === "" ||
-      (document.querySelector("#menuContainerDesktop").style.bottom === "1rem" &&
+      (document.querySelector("#menuContainerDesktop").style.bottom ===
+        "1rem" &&
         window.shouldLowerMenu)
     ) {
       window.shouldLowerMenu = false;
+      window.menuLowered = true;
       document.querySelector("#menuContainerDesktop").style.bottom =
         Math.ceil(
           window.innerHeight /
             parseFloat(getComputedStyle(document.documentElement).fontSize)
         ) + "rem";
     } else if (
-      document.querySelector("#menuContainerDesktop").style.bottom.replace("rem", "") *
+      document
+        .querySelector("#menuContainerDesktop")
+        .style.bottom.replace("rem", "") *
         1 <=
         1 &&
       !window.shouldLowerMenu
