@@ -24,7 +24,8 @@
   opacity: 0; /* make it transparent */
 }
 
-#discProduct {
+#discProduct1,
+#discProduct2 {
   background-image: url("../resources/imgs/discover-product.jpg");
 }
 

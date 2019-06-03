@@ -44,11 +44,11 @@
   grid-column: 4 / 4;
 }
 
-#menu:hover > .menuDot {
+.menuClass:hover > .menuDot {
   color: #3d322c;
 }
 
-#menu:hover #dot1 {
+.menuClass:hover #dot1 {
   animation: scintillateDots1 4s forwards;
 }
 @keyframes scintillateDots1 {
@@ -59,7 +59,7 @@
     color: #3d322c;
   }
 }
-#menu:hover #dot2 {
+.menuClass:hover #dot2 {
   animation: scintillateDots2 4s forwards;
 }
 @keyframes scintillateDots2 {
@@ -70,7 +70,7 @@
     color: #3d322c;
   }
 }
-#menu:hover #dot3 {
+.menuClass:hover #dot3 {
   animation: scintillateDots3 4s forwards;
 }
 @keyframes scintillateDots3 {
@@ -81,7 +81,7 @@
     color: #3d322c;
   }
 }
-#menu:hover #dot4 {
+.menuClass:hover #dot4 {
   animation: scintillateDots4 4s forwards;
 }
 @keyframes scintillateDots4 {
@@ -92,7 +92,7 @@
     color: #3d322c;
   }
 }
-#menu:hover #dot5 {
+.menuClass:hover #dot5 {
   animation: scintillateDots5 4s forwards;
 }
 @keyframes scintillateDots5 {
@@ -103,7 +103,7 @@
     color: #3d322c;
   }
 }
-#menu:hover #dot6 {
+.menuClass:hover #dot6 {
   animation: scintillateDots6 4s forwards;
 }
 @keyframes scintillateDots6 {
@@ -114,7 +114,7 @@
     color: #3d322c;
   }
 }
-#menu:hover #dot7 {
+.menuClass:hover #dot7 {
   animation: scintillateDots7 4s forwards;
 }
 @keyframes scintillateDots7 {
@@ -125,7 +125,7 @@
     color: #3d322c;
   }
 }
-#menu:hover #dot8 {
+.menuClass:hover #dot8 {
   animation: scintillateDots8 4s forwards;
 }
 @keyframes scintillateDots8 {
@@ -136,7 +136,7 @@
     color: #3d322c;
   }
 }
-#menu:hover #dot9 {
+.menuClass:hover #dot9 {
   animation: scintillateDots9 4s forwards;
 }
 @keyframes scintillateDots9 {

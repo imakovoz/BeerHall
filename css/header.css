@@ -76,7 +76,7 @@ header section {
   height: 100%;
 }
 
-#menu {
+.menuClass {
   border-bottom-left-radius: 3px;
 }
 
@@ -94,7 +94,7 @@ header section {
   cursor: default;
 }
 
-#menu {
+.menuClass {
   display: grid;
   grid-template-columns: 29% 14% 14% 14% 29%;
   grid-template-rows: 29% 14% 14% 14% 29%;
@@ -139,7 +139,7 @@ header section {
   background-position: 0% 0%;
 }
 
-#menu:hover,
+.menuClass:hover,
 #reservation:hover,
 #retailers:hover,
 #search:hover,
@@ -174,7 +174,7 @@ header section {
   color: black;
 }
 
-#mobileHeader #menu {
+#mobileHeader .menuClass {
   border: 0px solid white;
   height: 100%;
 }
@@ -243,4 +243,8 @@ header section {
 #mobileMenuDropdown section p a {
   color: #3d322c;
   text-decoration: none;
+}
+
+#bottomFooterMobileBar {
+  display: none;
 }
