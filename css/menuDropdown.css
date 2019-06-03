@@ -281,7 +281,6 @@
 #menuClose:hover #menuCloseDotContainer {
   width: 2rem;
   height: 2rem;
-  margin-left: calc(30% - 0.25rem);
   transition: height 1s, width 1s, margin-left 1s;
 }
 
