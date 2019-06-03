@@ -192,6 +192,11 @@ header section {
   padding-right: 2rem;
 }
 
+#headerMobilRight i {
+  font-size: 1.5rem;
+  color: #70695c;
+}
+
 #mobileMenuDropdown {
   position: fixed;
   top: 4rem;
