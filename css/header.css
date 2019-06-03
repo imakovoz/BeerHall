@@ -139,7 +139,7 @@ header section {
   background-position: 0% 0%;
 }
 
-.menuClass:hover,
+#menu:hover,
 #reservation:hover,
 #retailers:hover,
 #search:hover,
