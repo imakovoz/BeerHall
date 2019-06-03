@@ -1,0 +1,153 @@
+@media only screen and (max-width: 1000px) {
+  #foodHome {
+    margin-top: -3px;
+  }
+  #main-container {
+    display: grid;
+    background-color: white;
+    grid-template-rows:
+      minmax(1500px, 100vh) minmax(600px, 110vh) auto minmax(400px, 100vh) minmax(
+        550px,
+        100vh
+      )
+      auto;
+  }
+}
+@media only screen and (min-width: 1001px) {
+  #main-container {
+    display: grid;
+    background-color: white;
+    grid-template-rows:
+      minmax(750px, 100vh) minmax(600px, 110vh) auto minmax(400px, 80vh) minmax(
+        550px,
+        100vh
+      )
+      auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #menuCloseDotContainer {
+    display: none;
+  }
+
+  #menuClose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menuClose p {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  #reviewsContainer > #reviewHolder {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  #reviewHolder > .review {
+    width: 25%;
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 549px) {
+  #reviewHolder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .review {
+    width: 66%;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .reviewStars {
+    width: 50%;
+  }
+
+  #reviewsContainer h3 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  #desktopHeader {
+    display: none;
+  }
+
+  #main-container {
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  #mobileHeader {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #home {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    background-color: white;
+  }
+
+  .homeCreative {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #home {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .railContainer {
+    width: 150%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 1199px) {
+  .railContainer {
+    width: 250%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 749px) {
+  #topBeerousel h2 {
+    font-size: 5rem;
+  }
+  .railContainer {
+    width: 450%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+  }
+}

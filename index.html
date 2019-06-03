@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="css/airbnb.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/menuDropdown.css" />
+    <link rel="stylesheet" href="css/responsiveCss.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Lora|Abril+Fatface|Oswald:300,400,600|Roboto+Mono:300,400"
+      href="https://fonts.googleapis.com/css?family=Lora|Abril+Fatface|Oswald:300,400,600|Roboto+Mono:300,400,700"
       rel="stylesheet"
     />
     <link
@@ -28,7 +29,7 @@
   </head>
   <body>
     <section id="menuDropdown">
-      <div id="menuContainer">
+      <div id="menuContainerDesktop">
         <div class="menuHolder" id="menuLeftHold">
           <div class="menuOption menuAnimation" id="menuClose">
             <div id="menuCloseDotContainer">
@@ -158,25 +159,44 @@
       </div>
     </section>
     <header id="mobileHeader">
-      <section id="headerMobilLeft">
-        <div id="menu" class="header-half openMenu openMenu">
-          <span class="menuDot" id="dot1">•</span>
-          <span class="menuDot" id="dot2">•</span>
-          <span class="menuDot" id="dot3">•</span>
-          <span class="menuDot" id="dot4">•</span>
-          <span class="menuDot" id="dot5">•</span>
-          <span class="menuDot" id="dot6">•</span>
-          <span class="menuDot" id="dot7">•</span>
-          <span class="menuDot" id="dot8">•</span>
-          <span class="menuDot" id="dot9">•</span>
-        </div>
-      </section>
-      <section id="headerMobilMid">
-        <img src="resources/imgs/mobileDesktopLogo.png" />
-      </section>
-      <section id="headerMobilRight">
-        <i class="fas fa-phone" fa-3x></i>
-      </section>
+      <div id="mobileHeadBar">
+        <section id="headerMobilLeft">
+          <div id="menu" class="header-half openMenu">
+            <span class="menuDot" id="dot1">•</span>
+            <span class="menuDot" id="dot2">•</span>
+            <span class="menuDot" id="dot3">•</span>
+            <span class="menuDot" id="dot4">•</span>
+            <span class="menuDot" id="dot5">•</span>
+            <span class="menuDot" id="dot6">•</span>
+            <span class="menuDot" id="dot7">•</span>
+            <span class="menuDot" id="dot8">•</span>
+            <span class="menuDot" id="dot9">•</span>
+          </div>
+        </section>
+        <section id="headerMobilMid">
+          <img src="resources/imgs/mobileDesktopLogo.png" />
+        </section>
+        <section id="headerMobilRight">
+          <i class="fas fa-phone" fa-3x></i>
+        </section>
+      </div>
+      <div id="mobileMenuDropdown">
+        <section>
+          <p>Retailers</p>
+          <p>Boutique</p>
+          <p>Beers</p>
+          <p>Menu</p>
+          <p>Team</p>
+          <p>Historic</p>
+          <p>News</p>
+          <p>St-Tite Saloon</p>
+          <p>Brewery</p>
+          <p>About</p>
+          <p>Contact</p>
+          <p>Reservation</p>
+          <p>Check Out My Resume!</p>
+        </section>
+      </div>
     </header>
     <header id="desktopHeader">
       <section id="headerDesktopLeft">

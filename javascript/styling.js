@@ -217,27 +217,27 @@ window.addEventListener("load", event => {
 
   function lowerMenu() {
     if (
-      document.querySelector("#menuContainer").style.bottom === "" ||
-      (document.querySelector("#menuContainer").style.bottom === "1rem" &&
+      document.querySelector("#menuContainerDesktop").style.bottom === "" ||
+      (document.querySelector("#menuContainerDesktop").style.bottom === "1rem" &&
         window.shouldLowerMenu)
     ) {
       window.shouldLowerMenu = false;
-      document.querySelector("#menuContainer").style.bottom =
+      document.querySelector("#menuContainerDesktop").style.bottom =
         Math.ceil(
           window.innerHeight /
             parseFloat(getComputedStyle(document.documentElement).fontSize)
         ) + "rem";
     } else if (
-      document.querySelector("#menuContainer").style.bottom.replace("rem", "") *
+      document.querySelector("#menuContainerDesktop").style.bottom.replace("rem", "") *
         1 <=
         1 &&
       !window.shouldLowerMenu
     ) {
       clearInterval(window.moveMenuDown);
     } else {
-      document.querySelector("#menuContainer").style.bottom =
+      document.querySelector("#menuContainerDesktop").style.bottom =
         document
-          .querySelector("#menuContainer")
+          .querySelector("#menuContainerDesktop")
           .style.bottom.replace("rem", "") -
         1 +
         "rem";

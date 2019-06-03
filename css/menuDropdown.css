@@ -10,7 +10,7 @@
   display: none;
 }
 
-#menuContainer {
+#menuContainerDesktop {
   height: calc(100% - 1rem);
   background: #f3db5d;
   display: grid;
@@ -399,20 +399,4 @@
 
 .menuHolder .menuOption {
   text-align: center;
-}
-
-@media only screen and (max-width: 1200px) {
-  #menuCloseDotContainer {
-    display: none;
-  }
-
-  #menuClose {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #menuClose p {
-    margin: 0;
-  }
 }
