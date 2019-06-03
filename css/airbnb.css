@@ -76,3 +76,16 @@
   padding: 0 5rem 5rem 0;
   width: 6rem;
 }
+
+#readMoreAirbnb {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 10rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #59c4c6;
+  border-radius: 3px;
+}

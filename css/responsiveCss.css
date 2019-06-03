@@ -215,4 +215,12 @@
     justify-content: space-around;
     padding-bottom: 2rem;
   }
+
+  #airbnbLeft {
+    width: 80%;
+  }
+
+  #airbnbRight {
+    width: 20%;
+  }
 }
